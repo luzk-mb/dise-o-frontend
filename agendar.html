@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dentix360 | Agendar Cita</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>Dentix360</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="agendar.html">Citas</a>
+    <a href="miscitas.html">Mis Citas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<section class="contenedor">
+  <h2>Agendar Cita</h2>
+  <form onsubmit="confirmarCita(); return false;">
+    <input type="text" placeholder="Nombre completo" required>
+    <input type="tel" placeholder="Teléfono" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <input type="date" required>
+    <input type="time" required>
+
+    <select required>
+      <option value="">Seleccione el servicio</option>
+      <option>Limpieza dental</option>
+      <option>Ortodoncia</option>
+      <option>Endodoncia</option>
+      <option>Blanqueamiento</option>
+    </select>
+
+    <button class="btn">Confirmar cita</button>
+  </form>
+</section>
+
+<footer>© 2025 Dentix360</footer>
+</body>
+</html>
