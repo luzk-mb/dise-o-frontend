@@ -1,35 +1,97 @@
-body {
+:root {
+  --azul: #4DA6FF;
+  --blanco: #FFFFFF;
+  --gris: #F4F6F8;
+  --verde: #4CAF50;
+  --rojo: #E53935;
+  --texto: #333333;
+}
+
+* {
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
+}
+
+body {
   margin: 0;
-  background-color: #f4f6f8;
+  background-color: var(--gris);
+  color: var(--texto);
 }
 
 header {
-  background-color: #0aa2c0;
-  color: white;
-  padding: 15px;
+  background-color: var(--azul);
+  color: var(--blanco);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav a {
-  color: white;
-  margin-right: 15px;
+  color: var(--blanco);
   text-decoration: none;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background-color: var(--blanco);
+  padding: 60px;
+  text-align: center;
 }
 
 .contenedor {
-  padding: 20px;
+  background-color: var(--blanco);
+  margin: 30px;
+  padding: 30px;
+  border-radius: 10px;
 }
 
 .cards {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .card {
-  background: white;
+  background-color: var(--gris);
   padding: 20px;
   border-radius: 8px;
-  width: 200px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 200px;
+}
+
+.btn {
+  background-color: var(--verde);
+  color: var(--blanco);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-cancelar {
+  background-color: var(--rojo);
+}
+
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--azul);
+  color: var(--blanco);
 }
