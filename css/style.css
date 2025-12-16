@@ -18,6 +18,10 @@ body {
   color: var(--texto);
 }
 
+/* ============================= */
+/* HEADER + LOGO */
+/* ============================= */
+
 header {
   background-color: var(--azul);
   color: var(--blanco);
@@ -26,6 +30,26 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
+/* CONTENEDOR DEL LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  background-color: var(--blanco);
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+/* IMAGEN DEL LOGO */
+.logo img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ============================= */
+/* NAVEGACIÓN */
+/* ============================= */
 
 nav a {
   color: var(--blanco);
@@ -38,11 +62,19 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* ============================= */
+/* HERO */
+/* ============================= */
+
 .hero {
   background-color: var(--blanco);
   padding: 60px;
   text-align: center;
 }
+
+/* ============================= */
+/* CONTENEDORES */
+/* ============================= */
 
 .contenedor {
   background-color: var(--blanco);
@@ -50,6 +82,10 @@ nav a:hover {
   padding: 30px;
   border-radius: 10px;
 }
+
+/* ============================= */
+/* CARDS */
+/* ============================= */
 
 .cards {
   display: flex;
@@ -64,6 +100,10 @@ nav a:hover {
   flex: 1;
   min-width: 200px;
 }
+
+/* ============================= */
+/* BOTONES */
+/* ============================= */
 
 .btn {
   background-color: var(--verde);
@@ -83,11 +123,20 @@ nav a:hover {
   background-color: var(--rojo);
 }
 
-form input, form select {
+/* ============================= */
+/* FORMULARIOS */
+/* ============================= */
+
+form input,
+form select {
   width: 100%;
   padding: 10px;
   margin-bottom: 12px;
 }
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
 
 footer {
   text-align: center;
@@ -95,3 +144,24 @@ footer {
   background-color: var(--azul);
   color: var(--blanco);
 }
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+}
+
