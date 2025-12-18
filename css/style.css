@@ -39,6 +39,9 @@ body {
   padding: 15px 40px;
   background-color: var(--blanco);
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 /* LOGO */
@@ -61,8 +64,13 @@ body {
 /* ============================= */
 /* NAVEGACIÓN */
 /* ============================= */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .nav a {
-  margin-left: 20px;
   text-decoration: none;
   color: #374151;
   font-weight: 500;
@@ -82,23 +90,26 @@ body {
 }
 
 /* ============================= */
-/* HERO */
+/* HERO PROFESIONAL */
 /* ============================= */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 40px;
-  background: linear-gradient(135deg, #f0f7ff, #ffffff);
+  gap: 40px;
+  padding: 60px 80px;
+  background: linear-gradient(135deg, #eaf3ff, #ffffff);
 }
 
 .hero-text {
-  max-width: 500px;
+  flex: 1;
 }
 
 .hero-text h1 {
   font-size: 42px;
+  line-height: 1.2;
   color: #1f2937;
+  margin-bottom: 20px;
 }
 
 .hero-text h1 span {
@@ -108,22 +119,26 @@ body {
 .hero-text p {
   font-size: 16px;
   color: #4b5563;
-  line-height: 1.6;
+  max-width: 500px;
   margin-bottom: 30px;
-}
-.hero-buttons {
-  display: flex;
-  gap: 15px;
 }
 
 .hero-buttons {
   display: flex;
   gap: 15px;
 }
+
+/* IMAGEN HERO */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 .hero-image img {
-  width: 500px;
+  max-width: 100%;
   border-radius: 20px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
 /* ============================= */
@@ -183,6 +198,7 @@ body {
   flex: 1;
   min-width: 200px;
 }
+
 /* ============================= */
 /* FORMULARIOS */
 /* ============================= */
@@ -230,17 +246,23 @@ footer {
 /* RESPONSIVE */
 /* ============================= */
 @media (max-width: 768px) {
-  header {
+  .hero {
     flex-direction: column;
-    gap: 15px;
+    padding: 40px 20px;
     text-align: center;
   }
 
-  nav {
-    display: flex;
-    flex-wrap: wrap;
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-buttons {
     justify-content: center;
-    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .hero-image img {
+    max-width: 90%;
   }
 
   .cards {
@@ -252,6 +274,7 @@ footer {
     padding: 20px;
   }
 }
+
 
 
 
