@@ -111,6 +111,20 @@ body {
   line-height: 1.6;
   margin-bottom: 30px;
 }
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+.hero-image img {
+  width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
 
 /* ============================= */
 /* BOTONES */
