@@ -8,38 +8,57 @@
 </head>
 <body>
 
-<header>
-  <h1>Dentix360</h1>
-  <nav>
+<header class="header">
+  <div class="logo-area">
+    <h1 class="logo-text">Dentix360</h1>
+  </div>
+
+  <nav class="nav">
     <a href="index.html">Inicio</a>
     <a href="servicios.html">Servicios</a>
-    <a href="agendar.html">Citas</a>
+    <a href="agendar.html" class="active">Citas</a>
     <a href="miscitas.html">Mis Citas</a>
     <a href="contacto.html">Contacto</a>
   </nav>
 </header>
 
 <section class="contenedor">
-  <h2>Agendar Cita</h2>
-  <form onsubmit="confirmarCita(); return false;">
-    <input type="text" placeholder="Nombre completo" required>
-    <input type="tel" placeholder="Teléfono" required>
-    <input type="email" placeholder="Correo electrónico" required>
-    <input type="date" required>
-    <input type="time" required>
+  <h2>Agendar Cita Odontológica</h2>
 
-    <select required>
-      <option value="">Seleccione el servicio</option>
-      <option>Limpieza dental</option>
+  <form id="formCita">
+    <label for="nombre">Nombre completo</label>
+    <input type="text" id="nombre" required>
+
+    <label for="correo">Correo electrónico</label>
+    <input type="email" id="correo" required>
+
+    <label for="telefono">Teléfono</label>
+    <input type="tel" id="telefono" required>
+
+    <label for="servicio">Servicio</label>
+    <select id="servicio" required>
+      <option value="">Seleccione un servicio</option>
+      <option>Limpieza Dental</option>
       <option>Ortodoncia</option>
       <option>Endodoncia</option>
-      <option>Blanqueamiento</option>
+      <option>Blanqueamiento Dental</option>
     </select>
 
-    <button class="btn">Confirmar cita</button>
+    <label for="fecha">Fecha</label>
+    <input type="date" id="fecha" required>
+
+    <label for="hora">Hora</label>
+    <input type="time" id="hora" required>
+
+    <button type="submit" class="btn-primary">Agendar Cita</button>
+    <button type="reset" class="btn-outline">Cancelar</button>
   </form>
 </section>
 
-<footer>© 2025 Dentix360</footer>
+<footer>
+  © 2025 Dentix360
+</footer>
+
 </body>
 </html>
+
